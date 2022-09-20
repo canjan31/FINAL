@@ -1,0 +1,480 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Rampart+One&display=swap');
+*{
+    box-sizing: border-box;
+    font-family:'Playfair Display', serif;
+    font-weight: 500;
+}
+body{
+    padding: 0;
+    margin: 0;
+    font-family:'Segoe UI','Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* HEADER SECTION CSS STARTS */
+.logo{
+    padding-left: 20px;
+    width: 200px;
+    height: 60px;
+}
+.logo:hover{
+    width:210px;
+    height:65px;
+    transition: 0.5s;
+}
+.navbar{
+    position:fixed;
+    top: 0;
+    left:0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:white;
+    color: #1d1d1d;
+    z-index: 100;
+}
+.navbar-links ul{
+    margin:0;
+    padding:0;
+    display: flex;
+}
+.navbar-links li{
+    list-style: none;
+}
+.navbar-links li a{
+    text-decoration: none;
+    color:black;
+    padding:20px;
+    display: block;
+}
+.navbar-links li:hover{
+    border-radius: 10px;
+    text-decoration:overline;
+    background-color: #bababa;
+    font-size:large;
+    transition: 0.5s;
+
+}
+.toggle-button{
+    position: absolute;
+    top:20px;
+    right:80px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height:21px;
+}
+.toggle-button .bar{
+    height: 3px;
+    width:100%;
+    background-color: black;
+    border-radius:10px;
+}
+/* responsive design for navbar */
+@media (max-width: 480px) and (max-width: 768px) {
+    .toggle-button{
+        display: flex;
+    }
+    .navbar-links{
+        display: none;
+        width: 100%;
+    }
+    .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navbar-links ul{
+        flex-direction: column;
+        width:100%
+    }
+    .navbar-links li{
+        text-align:center;
+    }
+    .navbar-links li a{
+        padding:10px 8px;;
+    }
+    .active{
+        display: flex;
+    }  
+}
+/* HEADER SECTION CSS ENDS */
+/* HOME SECTION CSS STARTS */
+#home{
+    background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.20)),url(/Lunch/background.png);
+    background-size:cover;
+    background-repeat:repeat;
+    text-align: center;
+    height:auto;
+    padding-top: 30px;
+}
+.name{
+    color: #1d1d1d;
+    position: static;
+    font-family:'Rampart One', cursive;
+    font-size: 40px;
+    font-stretch:wider;
+    max-width:100%;
+}
+.name{
+    padding-left: 80px;
+    display: flex;
+    transition: 3.5s;
+}
+.one{
+    transition-delay: 0s;
+}
+.one:hover{
+    transition: 1s;
+    font-size:60px;
+}
+.two{
+    transition-delay: 1s;
+}
+.two:hover{
+    transition: 1s;
+    font-size:60px;
+}
+.three{
+    transition-delay: 2s;
+}
+.three:hover{
+    transition: 1s;
+    font-size:60px;
+}
+.four{
+    transition-delay: 3s;
+}
+.four:hover{
+    transition: 1s;
+    font-size:60px;
+}
+.five{
+    font-size: 20px;
+    font-family:'Playfair Display', serif;
+    transition-delay: 4s;
+}
+.five:hover{
+    transition: 1s;
+    font-size:30px ;
+}
+/* responsive design for home section */
+@media(max-width:480px)and (max-width :768px){
+    #home{
+        width:100%;
+    }
+}
+
+
+/* HOME SECTION CSS ENDS  */
+/* MENU SECTION CSS STARTS  */
+
+.shop menu{
+    padding-left: 50px;
+    text-align: center;
+}
+.shop{
+    margin-top:32px;
+}
+.section-title{
+    font-style: 18px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 32px;
+}
+.product-img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.shop-content{
+    display: grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap: 1.2rem;
+    margin:0px 10px;
+}
+.product-box{
+    position:relative;
+}
+.product-box:hover{
+    padding:10px;
+    border:1px solid #1d1d1d;
+    transition:.4s;
+}
+.product-title{
+    font-size: 18px;
+    text-transform: uppercase;
+}
+.add-cart{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 10px;
+    cursor: pointer;
+}
+.add-cart:hover{
+background-color: #bababa;
+}
+/* responsive design for menu section */
+
+@media(max-width:480px){
+    .shop-content{
+        display:flex;
+        flex-direction:column;
+    }
+}
+
+/* MENU SECTION CSS ENDS  */
+/* REVIEW SECTION CSS STARTS */
+
+
+#review{
+    height:auto;
+    width:100%;
+    background-color: white; 
+}
+.header{
+    width: 25%;
+    color:#1d1d1d;
+    text-align: center;
+    margin:auto;
+    margin-top: 5%;
+    padding:1rem;
+}
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap:40px;
+    width: auto;
+    margin:Auto;
+    margin-top:5%;
+    padding:0 40px;
+
+}
+.profile{
+    height: 100px;
+    width:100px;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-bottom: 10px;
+}
+.comment{
+text-align:center;
+padding:24px;
+border-bottom-left-radius: 50px;
+border-top-right-radius: 50px;
+border:4px solid #1d1d1d;
+}
+.nam{
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-top: 10px;
+}
+/* responsive design for review section */
+@media (max-width: 768px),(max-width:960px){
+    .container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin:0 40px;
+    }
+}
+@media(max-width:1200px){
+    .container{
+        display:grid;
+        margin:0 60px;
+    }
+}
+@media(max-width :480px){
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+    
+}
+/* REVIEW SECTION CSS ENDS  */
+/* CONTACTS SECTION CSS STARTS */
+#footer{
+    text-align: center;
+    position:relative;
+    bottom:0px;
+    width:auto;
+    height: auto;
+    margin-top: 100px;
+    border-top: 4px solid #1d1d1d;
+  }
+  .main-content{
+    display:flex;
+  }
+  .main-content .box{
+   padding:10px 20px;
+    flex-basis:50%;
+  }
+  .box h2{
+    font-size:1.125rem;
+    font-weight:600;
+    text-transform:uppercase;
+  }
+  .box .content{
+    margin:20px 0 0 0;
+  }
+  .left .content .social{
+    margin:20px 0 0 0;
+  }
+  .left .content P{
+    text-align:justify;
+  }
+  .left .content .social a{
+    padding:0 2px;
+  }
+  .left .content .social a span{
+    height:40px;
+    width:40px;
+    background:white;
+    line-height:40px;
+    text-align:centre;
+    font-size:18px;
+    border-radius:5px;
+    transition: 0.3s;
+  }
+  .left .content .social a span:hover{
+    background:#bababa;
+  }
+  @media (max-width: 480px) {
+    .main-content{
+        text-align: center;
+        width: 100%;
+        display:flex;
+        flex-direction: column;
+        position:absolute;
+        background-color: white;  
+  }}
+
+/* CONTACTS SECTION CSS ENDS  */
+ 
+/* cart button and its div css. */
+/* responsive design for cart icon in smaller screen */
+#cart-icon{
+    position:relative;
+    font-size: x-large;
+    left: 20px;
+    cursor: pointer;
+    }
+    @media(max-width:480px){
+        #cart-icon{
+            position:absolute;
+            left:290px;
+            top:20px;
+        }
+    }
+
+.cart{
+    position: fixed;
+    top:0;
+    right:0;
+    right:-170%;
+    width:360px;
+    height:100vh ;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding:20px;
+    background-color:white;
+    box-shadow: -2px solid 4px;
+    border: 1px solid #1d1d1d;
+    transition: 1.5s;
+}
+.cart.active{
+    right:0;
+    transition: .5s;
+}
+.cart-title{
+    text-align: center;
+    font-size: 16px;
+    margin-top:32px;
+}
+.cart-box{
+    display: grid;
+    grid-template-columns:32% 50% 18% ;
+    align-items:center;
+    gap:16px;
+    margin-top:16px;
+}
+.cart-img{
+    width:100px;
+    height:100px;
+    object-fit:contain ;
+    padding:10px;
+}
+.detail-box{
+    display: grid;
+    row-gap: 8px;
+}
+.cart-product-title{
+    font-size:16px;
+    text-transform: uppercase;
+}
+.cart-quantity{
+    border:#1d1d1d 1px solid;
+    width:36px;
+    text-align: center;
+    font-size: 16px;
+}
+.cart-remove{
+    font-size: 16px;
+    color: #1d1d1d;
+    cursor: pointer;
+}
+.total{
+    display: flex;
+    justify-content: center;
+    margin-top:24px;
+    border-top:1px solid #1d1d1d;
+    padding-right: 20px;
+}
+.tota-title{
+    font-size:12px;
+    font-weight:600;
+}
+.total-price{
+    margin-left:12px;
+}
+.btn-buy{
+    display: flex;
+    margin:24px auto;
+    padding:12px 20px;
+    border:none;
+    background-color: #bababa;
+    font-size:16px;
+    cursor: pointer;
+}
+.btn-buy:hover{
+    background-color: bisque;
+}
+#cart-close{
+position:absolute;
+top:16px;
+right: 12px;
+font-size:16px;
+color: #1d1d1d;
+cursor: pointer;
+}
+/* responsive design for the cart that lies in negative width */
+@media (max-width:768px){
+    .cart{
+        padding-left: 100px;
+    }
+}
+@media (max-width:1200px){
+    .cart{
+        width:800px;
+    }
+}
+@media (max-width:480px){
+    .cart{
+        width:350px;
+        display: flex;
+        flex-direction: column;
+        padding:0;
+    }}
